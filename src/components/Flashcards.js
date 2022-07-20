@@ -23,7 +23,7 @@ export default function FlashCards() {
                 </div>
 
                 <div className="contents">
-                    {deck.map((card, index)=> (<Cards key={index} question={card.question} />))}
+                    {deck.map((card, index) => (<Cards key={index} id={index} question={card.question} answer={card.answer} />))}
                 </div>
             </div>
             <div className="footer">

@@ -1,8 +1,8 @@
 import React from "react";
 import FlashCards from "./Flashcards.js";
 
-export default function TelaInicial() {
-    const [tela, setTela] = React.useState(
+export default function InitialScreen() {
+    const [screen, setScreen] = React.useState(
         <div className="container">
             <div className="initial-screen">
                 <div>
@@ -11,18 +11,18 @@ export default function TelaInicial() {
 
                 <h1>ZapRecall</h1>
 
-                <div className="button" onClick={carregarFlashcard}>Iniciar Recall!</div>
+                <div className="button" onClick={loadFlashcard}>Iniciar Recall!</div>
             </div>
         </div>
     );
 
-    function carregarFlashcard() {
-        setTela(<FlashCards />);
+    function loadFlashcard() {
+        setScreen(<FlashCards />);
     }
 
     return (
         <>
-            {tela}
+            {screen}
         </>
     );
 }
