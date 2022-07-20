@@ -1,9 +1,9 @@
-import TelaInicial from "./TelaInicial";
+import Start from "./Start";
 
 export default function App() {
     return (
-        <div>
-            <TelaInicial />
-        </div>
+        <>
+            <Start />
+        </>
     );
 }
