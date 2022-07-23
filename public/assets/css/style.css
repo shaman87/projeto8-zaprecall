@@ -12,9 +12,11 @@ h1 {
     color: #FFF;
     font-size: 36px;
     font-weight: 400;
+    padding: 0 25px;
 }
 
 h2 {
+    color: #333333;
     font-size: 18px;
     font-weight: 400;
 }
@@ -29,9 +31,9 @@ h3 {
     background-color: #FB6B6B;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 375px;
+    height: 100%;
 }
 
 .initial-screen {
@@ -39,7 +41,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .button {
@@ -69,7 +71,8 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0 40px 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .card-title {
@@ -86,6 +89,37 @@ h3 {
     cursor: pointer;
 }
 
+.card-title ion-icon {
+    font-size: 30px;
+}
+
+.red h3 {
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.red ion-icon {
+    color: #FF3030;
+}
+
+.orange h3 {
+    color: #FF922E;
+    text-decoration: line-through;
+}
+
+.orange ion-icon {
+    color: #FF922E;
+}
+
+.green h3 {
+    color: #2FBE34;
+    text-decoration: line-through;
+}
+
+.green ion-icon {
+    color: #2FBE34;
+}
+
 .question {
     background-color: #FFFFD4;
     display: flex;
@@ -99,12 +133,9 @@ h3 {
     position: relative;
 }
 
-.card-title ion-icon {
-    font-size: 30px;
-}
-
-.question ion-icon {
-    font-size: 40px;
+.question img {
+    width: 30px;
+    height: 20px;
     position: absolute;
     bottom: 5px;
     right: 10px;
@@ -114,9 +145,9 @@ h3 {
 .answer {
     background-color: #FFFFD4;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 300px;
-    height: 130px;
     padding: 0 15px;
     margin: 15px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -124,11 +155,64 @@ h3 {
     position: relative;
 }
 
-.footer {
-    background-color: #FFF;
+.card-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.card-buttons div {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    width: 85px;
+    height: 37px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-buttons div:nth-child(1) {
+    background-color: #FF3030;
+}
+
+.card-buttons div:nth-child(2) {
+    background-color: #FF922E
+}
+
+.card-buttons div:nth-child(3) {
+    background-color: #2FBE34;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 375px;
-    height: 70px;
+    padding-top: 15px;
+}
+
+.footer strong {
+    font-size: 18px;
+}
+
+.footer p {
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+}
+
+.footer h2 {
+    line-height: 0;
+}
+
+.footer ion-icon {
+    font-size: 30px;
 }

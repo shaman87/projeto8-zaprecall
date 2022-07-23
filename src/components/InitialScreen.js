@@ -2,6 +2,10 @@ import React from "react";
 import FlashCards from "./Flashcards.js";
 
 export default function InitialScreen() {
+    function loadFlashcard() {
+        setScreen(<FlashCards />);
+    }
+
     const [screen, setScreen] = React.useState(
         <div className="container">
             <div className="initial-screen">
@@ -15,10 +19,6 @@ export default function InitialScreen() {
             </div>
         </div>
     );
-
-    function loadFlashcard() {
-        setScreen(<FlashCards />);
-    }
 
     return (
         <>

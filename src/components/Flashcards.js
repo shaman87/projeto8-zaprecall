@@ -1,4 +1,6 @@
-import Cards from "./Cards";
+import React from "react";
+import ShowCards from "./ShowCards";
+import Footer from "./Footer";
 
 const deck = [
     {question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"}, 
@@ -11,24 +13,56 @@ const deck = [
     {question: "Usamos estado (state) para __", answer: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
 ];
 
+const cardAnswers = [];
+
 export default function FlashCards() {
+    const answers = [...cardAnswers];
+    const shuffledCards = [...deck];
+    const cardsList = [];
+
+    const [answerText, setAnswerText] = React.useState([]);
+    function getText(text) {
+        const array = [...answerText, text]
+        setAnswerText(array);
+    }
+
+    function shuffle() { 
+        return Math.random() - 0.5; 
+    }
+    
+    function fourCards(array, newArray) {
+        for(let i = 0; i < 4; i++) {
+            newArray.push(array[i]);
+        }
+        return newArray;
+    }
+
+    shuffledCards.sort(shuffle);
+    fourCards(shuffledCards, cardsList);
+    
     return (
         <>
             <div className="container">
                 <div className="header">
                     <div>
-                        <img src="./assets/img/logo-pequeno.png"/>
+                        <img src="./assets/img/logo-pequeno.png" alt="logo" />
                     </div>
                     <h1>ZapRecall</h1>
                 </div>
 
                 <div className="contents">
-                    {deck.map((card, index) => (<Cards key={index} id={index} question={card.question} answer={card.answer} />))}
+                    {cardsList.map((card, index) => (<ShowCards 
+                        key={index} 
+                        id={index} 
+                        question={card.question} 
+                        answer={card.answer} 
+                        cardAnswers={cardAnswers} 
+                        answerText={answerText} 
+                        getText={getText} 
+                    />))}
                 </div>
             </div>
-            <div className="footer">
-                <h2>0/4 CONCLUÍDOS</h2>
-            </div>
+            <Footer cardAnswers={answers} />
         </>
     );
 }

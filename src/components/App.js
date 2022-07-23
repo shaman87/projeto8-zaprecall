@@ -1,9 +1,9 @@
-import Start from "./Start";
+import InitialScreen from "./InitialScreen";
 
 export default function App() {
     return (
         <>
-            <Start />
+            <InitialScreen />
         </>
     );
 }
