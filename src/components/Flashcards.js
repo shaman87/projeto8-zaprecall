@@ -14,16 +14,23 @@ const deck = [
 ];
 
 const cardAnswers = [];
+const finalMessageTitle = [];
+const finalMessageBody = "";
 
 export default function FlashCards() {
-    const answers = [...cardAnswers];
     const shuffledCards = [...deck];
     const cardsList = [];
 
     const [answerText, setAnswerText] = React.useState([]);
     function getText(text) {
-        const array = [...answerText, text]
+        const array = [...answerText, text];
         setAnswerText(array);
+    }
+
+    const [finalTextTitle, setFinalTextTitle] = React.useState([]);
+    function finalTextTitle1(element) {
+        const array = [...finalTextTitle, element];
+        setFinalTextTitle(array);
     }
 
     function shuffle() { 
@@ -57,12 +64,13 @@ export default function FlashCards() {
                         question={card.question} 
                         answer={card.answer} 
                         cardAnswers={cardAnswers} 
-                        answerText={answerText} 
                         getText={getText} 
+                        finalMessageTitle={finalMessageTitle} 
+                        finalTextTitle1={finalTextTitle1} 
                     />))}
                 </div>
             </div>
-            <Footer cardAnswers={answers} />
+            <Footer cardAnswers={cardAnswers} finalMessageTitle={finalMessageTitle} />
         </>
     );
 }

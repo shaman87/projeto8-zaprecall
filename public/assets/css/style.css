@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Recursive', sans-serif;
-    margin: 0;
+    margin: 0 auto;
 }
 
 h1 {
@@ -33,7 +33,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     width: 375px;
-    height: 100%;
+    margin: 0 auto;
 }
 
 .initial-screen {
@@ -41,7 +41,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    min-height: 900px;
+    max-height: 1000px;
 }
 
 .button {
@@ -73,6 +74,8 @@ h3 {
     align-items: center;
     margin-top: 20px;
     margin-bottom: 30px;
+    min-height: 600px;
+    max-height: 850px;
 }
 
 .card-title {
@@ -125,7 +128,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     width: 300px;
-    height: 130px;
+    height: 110px;
     padding: 0 15px;
     margin: 15px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -197,10 +200,22 @@ h3 {
     align-items: center;
     width: 375px;
     padding-top: 15px;
+    margin: 0 auto;
+}
+
+.footer > div {
+    display: flex;
+    align-items: center;
+}
+
+.footer img {
+    width: 23px;
+    height: 23px;
 }
 
 .footer strong {
     font-size: 18px;
+    margin-left: 10px;
 }
 
 .footer p {
