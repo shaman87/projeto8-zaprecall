@@ -1,4 +1,7 @@
 import React from "react";
+import setinha from "../components/assets/img/setinha.png";
+import sad from "../components/assets/img/sad.png";
+import party from "../components/assets/img/party.png";
 
 let containsRedIcon = false;
 
@@ -16,7 +19,7 @@ export default function ShowCards(props) {
         setCard(
             <div className="question">
                 <h2>{question}</h2>
-                <img src="./assets/img/setinha.png" onClick={flipCard} alt="virar"/>
+                <img src={setinha} onClick={flipCard} alt="virar"/>
             </div>
         );
     }
@@ -53,12 +56,12 @@ export default function ShowCards(props) {
         }
 
         if((cardAnswers.length === 4) && (containsRedIcon === true)) {
-            finalMessageTitle.push(<img src="./assets/img/sad.png" alt="sad" />);
+            finalMessageTitle.push(<img src={sad} alt="sad" />);
             finalMessageTitle.push(<strong>Putz...</strong>);
             finalMessageTitle.push(<p>Ainda faltam alguns... Mas não desanime!</p>);
             finalTextTitle1();
         } else if((cardAnswers.length === 4) && (containsRedIcon === false)) {
-            finalMessageTitle.push(<img src="./assets/img/party.png" alt="sad" />);
+            finalMessageTitle.push(<img src={party} alt="sad" />);
             finalMessageTitle.push(<strong>Parabéns!</strong>);
             finalMessageTitle.push(<p>Você não esqueceu de nenhum flashcard!</p>);
             finalTextTitle1();

@@ -12,13 +12,14 @@ h1 {
     color: #FFF;
     font-size: 36px;
     font-weight: 400;
-    padding: 0 25px;
+    margin: 25px;
 }
 
 h2 {
     color: #333333;
     font-size: 18px;
     font-weight: 400;
+    padding: 10px 5px;
 }
 
 h3 {
@@ -129,11 +130,15 @@ h3 {
     justify-content: space-between;
     width: 300px;
     height: 110px;
-    padding: 0 15px;
+    padding: 0 10px;
     margin: 15px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     position: relative;
+}
+
+.question h2 {
+    padding-top: 15px;
 }
 
 .question img {
@@ -151,18 +156,21 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     width: 300px;
-    padding: 0 15px;
+    padding: 2px 10px;
     margin: 15px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     position: relative;
 }
 
+.question h2 {
+    padding-top: 15px;
+}
+
 .card-buttons {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 5px;
 }
 
 .card-buttons div {
@@ -176,7 +184,7 @@ h3 {
     width: 85px;
     height: 37px;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -199,13 +207,14 @@ h3 {
     justify-content: center;
     align-items: center;
     width: 375px;
-    padding-top: 15px;
+    padding: 10px 0;
     margin: 0 auto;
 }
 
 .footer > div {
     display: flex;
     align-items: center;
+    padding-top: 5px;
 }
 
 .footer img {
@@ -218,16 +227,31 @@ h3 {
     margin-left: 10px;
 }
 
+.footer h2 {
+    padding-bottom: 5px;
+}
+
 .footer p {
     font-size: 18px;
     width: 200px;
     text-align: center;
-}
-
-.footer h2 {
-    line-height: 0;
+    padding: 13px 0 7px 0;
 }
 
 .footer ion-icon {
     font-size: 30px;
+}
+
+.restart-button {
+    background-color: #FB6B6B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 14px;
+    width: 167px;
+    height: 32px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }

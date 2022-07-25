@@ -1,5 +1,6 @@
 import React from "react";
 import FlashCards from "./Flashcards.js";
+import logo from "../components/assets/img/logo.png";
 
 export default function InitialScreen() {
     function loadFlashcard() {
@@ -10,7 +11,7 @@ export default function InitialScreen() {
         <div className="container">
             <div className="initial-screen">
                 <div>
-                    <img src="./assets/img/logo.png" alt="logo" />
+                    <img src={logo} alt="logo" />
                 </div>
 
                 <h1>ZapRecall</h1>

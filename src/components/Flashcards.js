@@ -1,6 +1,7 @@
 import React from "react";
 import ShowCards from "./ShowCards";
 import Footer from "./Footer";
+import logoPequeno from "../components/assets/img/logo-pequeno.png";
 
 const deck = [
     {question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"}, 
@@ -52,7 +53,7 @@ export default function FlashCards() {
             <div className="container">
                 <div className="header">
                     <div>
-                        <img src="./assets/img/logo-pequeno.png" alt="logo" />
+                        <img src={logoPequeno} alt="logo" />
                     </div>
                     <h1>ZapRecall</h1>
                 </div>

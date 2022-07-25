@@ -9,6 +9,7 @@ export default function Footer({cardAnswers, finalMessageTitle}) {
             <div>{finalMessageTitle[2]}</div>
             <h2>{answersCounter}/4 CONCLUÍDOS</h2>
             <div>{cardAnswers}</div>
+            <div>{finalMessageTitle[3]}</div>
         </div>
     );
 }
